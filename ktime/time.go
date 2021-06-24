@@ -9,7 +9,7 @@ import (
 const (
 	defData     = "2006-01-02"
 	defTime     = "15:04:05"
-	defDateTime = "Mon, 02 Jan 2006-01-02 15:04:05"
+	defDateTime = "2006-01-02 15:04:05"
 )
 
 var cstZone *time.Location

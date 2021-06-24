@@ -55,6 +55,3 @@ func Fatal(args ...interface{}) {
 	globalLogger.Fatal(args...)
 	os.Exit(0)
 }
-
-
-

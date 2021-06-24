@@ -92,5 +92,3 @@ func (cl *consoleLog) Error(args ...interface{}) {
 func (cl *consoleLog) Fatal(args ...interface{}) {
 	cl.println(FATAL, args...)
 }
-
-
