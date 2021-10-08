@@ -13,10 +13,18 @@ type Stack struct {
 //新建一个栈
 func NewStack() *Stack {
 	return &Stack{
-		elements: make([]interface{},DefCapOfStack),
+		elements: make([]interface{},64),
 		len: 0,
-		Cap: DefCapOfStack,
+		Cap: 64,
 	}
+}
+
+func NewStackWithValues(ele []int) *Stack {
+	s := NewStack()
+	for _,v := range ele{
+		s.Push(v)
+	}
+	return s
 }
 
 //带容量的栈

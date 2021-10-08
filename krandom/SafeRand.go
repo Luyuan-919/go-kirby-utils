@@ -19,13 +19,12 @@ func CreateRandomNumber(len int)  string{
 	return container
 }
 
-func CreateRandomString(len int) string  {
+func CreateRandomString(n int) string  {
 	var container string
 	var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-	b := bytes.NewBufferString(str)
-	length := b.Len()
+	length := len(str)
 	bigInt := big.NewInt(int64(length))
-	for i := 0;i < len ;i++  {
+	for i := 0;i < n ;i++  {
 		randomInt,_ := rand.Int(rand.Reader,bigInt)
 		container += string(str[randomInt.Int64()])
 	}

@@ -1,4 +1,4 @@
-package kset
+package DataStruct
 
 //定义匿名空结构体
 var (
@@ -49,7 +49,7 @@ func (hs *HashSet) IsEmpty()bool  {
 }
 
 func (hs *HashSet) Clear() {
-	hs.set = make(map[interface{}]struct{},defSize)
+	hs.set = make(map[interface{}]struct{}, defSize)
 }
 
 func (hs *HashSet) Iterator() []interface{} {

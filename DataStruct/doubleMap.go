@@ -1,4 +1,4 @@
-package kmap
+package DataStruct
 
 type kmap struct {
 	positive map[interface{}]interface{}

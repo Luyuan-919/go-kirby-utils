@@ -41,7 +41,7 @@ func NewEmailConfig(Host, Email, Pwd string, Port int) (cfg *EmailConfig) {
 	return &email
 }
 
-var NewEmailClient = func(cfg *EmailConfig) *EmailClient {
+func NewEmailClient(cfg *EmailConfig) *EmailClient {
 	if cfg.ServerName == "" {
 		cfg.ServerName = defServerName
 	} else if cfg.ContentType == "" {

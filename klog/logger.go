@@ -1,14 +1,14 @@
 package klog
 
 var (
-	levelOfLog  = [...]string{"DEBUG", "INFO", "WARN", "ERROR", "FATAL"}
+	levelOfLog  = [...]string{"Trace", "INFO", "WARN", "ERROR", "FATAL"}
 	PREFIX         = "[Kirby: STA]"
 )
 
 type Level int
 
 const (
-	DEBUG Level = iota
+	Trace Level = iota
 	INFO
 	WARNING
 	ERROR
@@ -17,20 +17,16 @@ const (
 
 // Logger log接口
 type Logger interface {
-	Debug(args ...interface{})
+	Trace(args ...interface{})
 
 	Info(args ...interface{})
 
 	Warn(args ...interface{})
 
-	Error(args ...interface{})
+	Errorf(args ...interface{})
 
 	Fatal(args ...interface{})
 
-	// SetLevel 设置输出端日志级别
-	SetLevel(level Level)
-	// GetLevel 获取输出端日志级别
-	GetLevel() string
+	SetPrefix(p string)
 
-	setSkip(skip int)
 }
